@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tarjetas',
@@ -9,16 +10,16 @@ export class TarjetasComponent implements OnInit {
 
   @Input() objTemas: string[] = [];
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
   }
 
-  verArtista( mensaje: string ) {
+  verTema( mensaje: string ) {
 
     console.log(mensaje);
 
-    // this.router.navigate([ '/artist', artistaId  ]);
+    this.router.navigate([ '/tema', mensaje  ]);
 
   }
 

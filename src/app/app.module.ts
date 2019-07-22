@@ -8,13 +8,15 @@ import { TarjetasComponent } from './tarjetas/tarjetas/tarjetas.component';
 import { CapacitacionComponent } from './pages/capacitacion/capacitacion.component';
 import { ItemsComponent } from './shared/items/items.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TemasComponent } from './pages/temas/temas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarjetasComponent,
     CapacitacionComponent,
-    ItemsComponent
+    ItemsComponent,
+    TemasComponent
   ],
   imports: [
     BrowserModule,
