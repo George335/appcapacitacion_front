@@ -9,6 +9,9 @@ import { CapacitacionComponent } from './pages/capacitacion/capacitacion.compone
 import { ItemsComponent } from './shared/items/items.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TemasComponent } from './pages/temas/temas.component';
+import { BodyComponent } from './components/body/body.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { TemasComponent } from './pages/temas/temas.component';
     TarjetasComponent,
     CapacitacionComponent,
     ItemsComponent,
-    TemasComponent
+    TemasComponent,
+    BodyComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

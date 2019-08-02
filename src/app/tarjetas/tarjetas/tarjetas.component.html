@@ -1,8 +1,8 @@
 <div class="card-columns m-5 animated fadeIn">
-    <div (click)="verTema( item )" *ngFor="let item of objTemas" class="card puntero">
-        <img src="https://es.freelogodesign.org/Content/img/logo-ex-7.png" class="card-img-top" alt="Card image cap">
+    <div (click)="verTema( item )" *ngFor="let item of objCapacitaciones" class="card puntero">
+        <img [src]="item.imagen" class="card-img-top" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{ item }}</h5>
+            <h5 class="card-title">{{ item.nombre }}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
     </div>

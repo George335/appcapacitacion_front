@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CapacitacionModel } from '../../models/capacitacion.models';
 
 @Component({
   selector: 'app-tarjetas',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TarjetasComponent implements OnInit {
 
-  @Input() objTemas: string[] = [];
+  @Input() objCapacitaciones: CapacitacionModel[] = []; 
 
   constructor( private router: Router ) { }
 
