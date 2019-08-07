@@ -16,11 +16,9 @@ export class TarjetasComponent implements OnInit {
   ngOnInit() {
   }
 
-  verTema( mensaje: string ) {
+  verTema( id: number ) {
 
-    console.log(mensaje);
-
-    this.router.navigate([ '/tema', mensaje  ]);
+    this.router.navigate([ '/tema', id  ]);
 
   }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CapacitacionModel } from '../../models/capacitacion.models';
 
 @Component({
   selector: 'app-body',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
+  }
+
+  verTema( id: number ) {
+
+    this.router.navigate([ '/tema', id  ]);
+
   }
 
 }
