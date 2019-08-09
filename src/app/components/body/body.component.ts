@@ -14,10 +14,10 @@ export class BodyComponent implements OnInit {
   ngOnInit() {
   }
 
-  verTema( id: number ) {
+  // verTema( id: number ) {
 
-    this.router.navigate([ '/tema', id  ]);
+  //   this.router.navigate([ '/tema', id  ]);
 
-  }
+  // }
 
 }

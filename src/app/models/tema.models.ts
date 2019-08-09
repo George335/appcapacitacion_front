@@ -1,9 +1,9 @@
 
 export class TemaModel {
-    id: string;
+    id: number;
     nombre: string;
-    imagen: string;
     video: string;
+    idcapacitacion: number;
     
 }
 

@@ -1,1 +1,49 @@
-"<iframe width="560" height="315" src="https://www.youtube.com/embed/TcKHQtW1-GA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
+<!-- "<iframe width="560" height="315" src="https://www.youtube.com/embed/TcKHQtW1-GA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" -->
+
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="card-group">
+
+
+
+                        <div class="card p-10">
+                            <div class="card-body">
+
+
+
+                                <div style="width:44%" class="col-2">
+                                    <div class="card-body text-center">
+                                        <div class="puntero" *ngFor="let item of temas">
+
+                                            <a (click)="verTema('0')" class="badge badge-primary" style="color:#FFFF;">{{ item.nombre }}</a>
+                                            <hr>
+                                            <!-- <a (click)="verTema('1')" class="badge badge-primary" style="color:#FFFF;">{{ item.nombre }}</a>
+                                                <hr>
+                                                <a (click)="verTema('2')" class="badge badge-primary" style="color:#FFFF;">Gestión Ambiental</a>
+                                                <hr>
+                                                <a (click)="verTema('3')" class="badge badge-primary" style="color:#FFFF;">Gestión Calidad</a>
+                                                <hr>
+                                                <a (click)="verTema('4')" class="badge badge-primary" style="color:#FFFF;">Salud Trabajo</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            "<iframe width="560" height="315" src="https://www.youtube.com/embed/TcKHQtW1-GA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
