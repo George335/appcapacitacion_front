@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { CapacitacionModel } from 'src/app/models/capacitacion.models';
 import { CapacitacionService } from 'src/app/services/capacitacion.service';
-import { CapacitacionModel } from '../../models/capacitacion.models';
 
 @Component({
-  selector: 'app-capacitacion',
-  templateUrl: './capacitacion.component.html'
+  selector: 'app-capacitacion-administrador',
+  templateUrl: './capacitacion-administrador.component.html'
 })
-export class CapacitacionComponent implements OnInit {
+export class CapacitacionAdministradorComponent implements OnInit {
 
   capacitaciones:CapacitacionModel[] = [];
   

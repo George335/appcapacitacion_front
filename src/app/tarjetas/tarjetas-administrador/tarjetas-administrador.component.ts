@@ -1,13 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { CapacitacionModel } from '../../models/capacitacion.models';
+import { CapacitacionModel } from 'src/app/models/capacitacion.models';
 
 @Component({
-  selector: 'app-tarjetas',
-  templateUrl: './tarjetas.component.html',
-  styles: []
+  selector: 'app-tarjetas-administrador',
+  templateUrl: './tarjetas-administrador.component.html'
 })
-export class TarjetasComponent implements OnInit {
+export class TarjetasAdministradorComponent implements OnInit {
 
   @Input() objCapacitaciones: CapacitacionModel[] = []; 
 

@@ -1,0 +1,54 @@
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="card-group">
+
+
+
+                        <!-- <div class="card p-10">
+                            <div class="card-body">
+
+
+
+                                <div style="width:44%" class="col-2">
+                                    <div class="card-body text-center">
+                                        <div class="puntero" *ngFor="let item of objCapacitaciones">
+
+                                                <a class="badge badge-primary" style="color:#FFFF;">{{ item.nombre }}</a>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> -->
+                        <div class="col-10">
+                            <div class="row">
+                                
+                                <div class="col-md-4 btn puntero"><a [routerLink]="['/listadoIsos']" class="badge badge-info" style="color:#FFFF;">Ingresar registro de capacitación</a></div>
+                                <div class="col-md-4 btn puntero"><a [routerLink]="['/registroUsuario']" class="badge badge-info" style="color:#FFFF;">Ingresar registro de usuario</a></div>
+                                <div class="col-md-4 btn puntero"><a class="badge badge-info" style="color:#FFFF;">Ingresar a menú de usuario</a></div>
+                            </div>
+                            <div class="row">
+                                    <div class="card-columns m-5 animated fadeIn">
+                                            <div *ngFor="let item of objCapacitaciones" class="card">
+                                                <img [src]="item.imagen" class="card-img-top" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ item.nombre }}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

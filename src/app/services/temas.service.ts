@@ -6,7 +6,8 @@ import { TemaModel } from "../models/tema.models";
 })
 export class TemasService {
   private tema: TemaModel;
-  private objTemas: TemaModel[];
+  
+  private temaList: Array<TemaModel> = [];
   private temas: TemaModel[] = [
     {
       id: 0,
@@ -65,24 +66,28 @@ export class TemasService {
   }
 
   getTemasByIdcapa(idcap: number): TemaModel[] {
+
+    this.temaList.length = 0; //Inicializamos la lista en 0
     
     for (let i = 0; i < this.temas.length; i++) {
+
       if (this.temas[i].idcapacitacion == idcap) {
 
-        this.objTemas.push(this.temas[i]);
-        
-        console.log(this.objTemas);
+        this.temaList.push(this.temas[i]);
+
       }
     }
 
-    return this.objTemas;
+    //console.log(this.empList);
+
+    return this.temaList;
   }
 
   getTema(idcap: number) {
     for (let i = 0; i < this.temas.length; i++) {
       if (this.temas[i].idcapacitacion == idcap) {
         this.tema = this.temas[i];
-        console.log(this.temas[i]);
+        //console.log(this.temas[i]);
       }
     }
 

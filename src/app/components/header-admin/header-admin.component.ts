@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html'
+  selector: 'app-header-admin',
+  templateUrl: './header-admin.component.html'
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderAdminComponent implements OnInit {
+  
   constructor( private router: Router ) { }
 
   ngOnInit() {
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   irCapacitaciones( id: number ) {
 
     if(id==1){
-      this.router.navigate([ '/inicio' ]);
+      this.router.navigate([ '/inicioPortalAdministrador' ]);
     }
 
   }

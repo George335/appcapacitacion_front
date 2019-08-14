@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ActivatedRoute } from "@angular/router";
-import { CapacitacionService } from 'src/app/services/capacitacion.service';
-import { TemasService } from '../../services/temas.service';
 import { TemaModel } from 'src/app/models/tema.models';
-import { CapacitacionModel } from '../../models/capacitacion.models';
+import { CapacitacionModel } from 'src/app/models/capacitacion.models';
+import { ActivatedRoute } from '@angular/router';
+import { CapacitacionService } from 'src/app/services/capacitacion.service';
+import { TemasService } from 'src/app/services/temas.service';
 
 @Component({
-  selector: 'app-temas',
-  templateUrl: './temas.component.html'
+  selector: 'app-ver-preguntas-item-capacitacion',
+  templateUrl: './ver-preguntas-item-capacitacion.component.html'
 })
-export class TemasComponent implements OnInit {
+export class VerPreguntasItemCapacitacionComponent implements OnInit {
   tema:TemaModel;
   capacitacion: CapacitacionModel;
   temas: TemaModel[];
@@ -25,7 +24,6 @@ export class TemasComponent implements OnInit {
       console.log(this.capacitacion);
       this.temas = this.temaService.getTemasByIdcapa(this.capacitacion.id);
 
-      //console.log(this.temas);
     });
   }
 
