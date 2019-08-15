@@ -15,6 +15,7 @@ import { BodyListadoIsosComponent } from './components/body-listado-isos/body-li
 import { BodyRegistroCapacitacionComponent } from './components/body-registro-capacitacion/body-registro-capacitacion.component';
 import { VerPreguntasItemCapacitacionComponent } from './pages/ver-preguntas-item-capacitacion/ver-preguntas-item-capacitacion.component';
 import { BodyVerPreguntaItemCapacitacionComponent } from './components/body-ver-pregunta-item-capacitacion/body-ver-pregunta-item-capacitacion.component';
+import { BodyRegistroRespuestaItemComponent } from './components/body-registro-respuesta-item/body-registro-respuesta-item.component';
 
 const routes: Routes = [
   { path: 'capacitacion', component: CapacitacionComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'listadoIsos', component: BodyListadoIsosComponent},
   { path: 'registroItemCapacitacion', component: BodyRegistroItemCapacitacionComponent},
   { path: 'verPreguntasItemCapacitacion/:id', component: BodyVerPreguntaItemCapacitacionComponent },
+  { path: 'registroRespuestaItem', component: BodyRegistroRespuestaItemComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'login' }
 ];
 

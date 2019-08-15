@@ -29,6 +29,8 @@ import { RegistroCapacitacionComponent } from './pages/registro-capacitacion/reg
 import { BodyRegistroCapacitacionComponent } from './components/body-registro-capacitacion/body-registro-capacitacion.component';
 import { VerPreguntasItemCapacitacionComponent } from './pages/ver-preguntas-item-capacitacion/ver-preguntas-item-capacitacion.component';
 import { BodyVerPreguntaItemCapacitacionComponent } from './components/body-ver-pregunta-item-capacitacion/body-ver-pregunta-item-capacitacion.component';
+import { BodyRegistroRespuestaItemComponent } from './components/body-registro-respuesta-item/body-registro-respuesta-item.component';
+import { RegistroRespuestaItemComponent } from './pages/registro-respuesta-item/registro-respuesta-item.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { BodyVerPreguntaItemCapacitacionComponent } from './components/body-ver-
     RegistroCapacitacionComponent,
     BodyRegistroCapacitacionComponent,
     VerPreguntasItemCapacitacionComponent,
-    BodyVerPreguntaItemCapacitacionComponent
+    BodyVerPreguntaItemCapacitacionComponent,
+    BodyRegistroRespuestaItemComponent,
+    RegistroRespuestaItemComponent
   ],
   imports: [
     BrowserModule,
