@@ -28,7 +28,7 @@ export class RegistroItemCapacitacionComponent implements OnInit {
 
   guardar() {
     //Obtener los items
-    this.setItem(this.item, this.pregunta);
+    this.setItem();
   }
 
   public setForma(item: ItemModel, pregunta: PreguntaModel) {
@@ -43,14 +43,14 @@ export class RegistroItemCapacitacionComponent implements OnInit {
     });
   }
 
-  public setItem(item: ItemModel, pregunta: PreguntaModel) {
+  public setItem() {
     this.item.nombre = this.forma2.controls["nombre"].value;
     this.pregunta.pregunta1 = this.forma.controls["pregunta1"].value;
     this.pregunta.pregunta2 = this.forma.controls["pregunta2"].value;
     this.pregunta.pregunta3 = this.forma.controls["pregunta3"].value;
 
-    console.log(this.item);
-    console.log(this.pregunta);
+    // console.log(this.item);
+    // console.log(this.pregunta);
 
     this.router.navigate( ['/registroRespuestaItem'] );
 
