@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from "@angular/forms";
 import { RespuestaModel } from '../../models/respuesta.models';
+import { PreguntaModel } from '../../models/pregunta.models';
+import { CapacitacionModel } from '../../models/capacitacion.models';
+import { ItemModel } from '../../models/item.models';
 
 @Component({
   selector: 'app-registro-respuesta-item',
@@ -9,45 +12,44 @@ import { RespuestaModel } from '../../models/respuesta.models';
 export class RegistroRespuestaItemComponent implements OnInit {
 
   forma: FormGroup;
-  forma2: FormGroup;
-  forma3: FormGroup;
-  respuesta = new  RespuestaModel();
-  respuesta2 = new  RespuestaModel();
-  respuesta3 = new  RespuestaModel();
 
-  descripcion: Array<string> = [];
+  capacitacion = new CapacitacionModel();
+  item = new ItemModel();
+  pregunta = new  PreguntaModel();
 
+  preguntas: Array<PreguntaModel> = [];
+  respuestas: Array<RespuestaModel> = [];
+
+  private listaPreguntas: PreguntaModel[] = [
+    {
+      id: 1,
+      pregunta1: "123456",
+      pregunta2: "vee",
+      pregunta3:"eff",
+      iditem: 3
+    }
+  ];
+ 
   constructor() {
-    this.setForma();
+    this.setForma(this.capacitacion, this.item, this.pregunta);
   }
 
   ngOnInit() {
   }
 
-  public setForma() {
+  public setForma( capacitacion: CapacitacionModel, item: ItemModel, pregunta: PreguntaModel ) {
 
     this.forma = new FormGroup({
 
-      respuestas: new FormArray([
+      // idIso: new FormControl(capacitacion.id, Validators.required),
+      // idItem: new FormControl(item.id, Validators.required)
+      // idPrg = new FormControl(pregunta.id, Validators.required),
+
+      idIso: new FormControl(1),
+      idItem: new FormControl(3), 
+      'respuestas': new FormArray([
         new FormControl('', Validators.required )
       ])
-      
-    }),
-
-    this.forma2 = new FormGroup({
-
-      respuestas2: new FormArray([
-        new FormControl('', Validators.required )
-      ])
-      
-    }),
-
-    this.forma3 = new FormGroup({
-
-      respuestas3: new FormArray([
-        new FormControl('', Validators.required )
-      ])
-      
     });
   }
 
@@ -57,31 +59,38 @@ export class RegistroRespuestaItemComponent implements OnInit {
     )
   }
 
-  agregarRespuesta2(){
-    (<FormArray>this.forma2.controls['respuestas2']).push(
-      new FormControl( '', Validators.required )
-    )
+
+  public setItem() {
+    this.item.id = this.forma.controls["idItem"].value;
+    this.pregunta.id = this.forma.controls["idPrg"].value;
+
+    console.log(this.item);
+    console.log(this.pregunta);
+
+
   }
 
+  
 
-  agregarRespuesta3(){
-    (<FormArray>this.forma3.controls['respuestas3']).push(
-      new FormControl( '', Validators.required )
-    )
-  }
+  // agregarRespuesta3(){
+  //   (<FormArray>this.forma3.controls['respuestas3']).push(
+  //     new FormControl( '', Validators.required )
+  //   )
+  // }
 
 
-  guardarCambios() {
+  guardar() {
 
-    this.descripcion = this.forma.value['respuestas'];
+    // this.descripcion = this.forma.value['respuestas'];
 
-    this.respuesta.id = 1;
-    this.respuesta.descripcion = this.forma.value['respuestas'];
-    this.respuesta.idpregunta = 3;
+    // this.respuesta.id = 1;
+    // this.respuesta.descripcion = this.forma.value['respuestas'];
+    // this.respuesta.idpregunta = 3;
 
     // console.log(this.forma.value['respuestas']);
     // console.log(this.descripcion);
-    console.log(this.respuesta);
+
+    // console.log(this.respuesta);
 
 
   }

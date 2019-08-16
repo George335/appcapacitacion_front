@@ -1,43 +1,63 @@
-import { UsuarioService } from './../../services/usuario.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Usuario } from "../../services/login.service";
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login.service';
-import { UsuarioModel } from 'src/app/models/usuario.models';
+import {
+  NgForm,
+  FormGroup,
+  FormControl,
+  Validators,
+  FormArray
+} from "@angular/forms";
+import { UsuarioModel } from "src/app/models/usuario.models";
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html'
+  selector: "app-login",
+  templateUrl: "./login.component.html"
 })
 export class LoginComponent implements OnInit {
+  forma: FormGroup;
+  usuario = new UsuarioModel();
+  objUsuario = new UsuarioModel();
 
-  private usuario: UsuarioModel;
-  usuarios:any[] = []
-  termino:string;
-
-  constructor( private router: Router, 
-                private _loginService: LoginService, 
-                private _usuarioService: UsuarioService ) { }
-
-  ngOnInit() {
+  constructor( private _usuarioService: UsuarioService, private router: Router) {
+    this.setForma(this.usuario);
   }
 
-  loguearse( dni:string, pass:string ){
+  ngOnInit() {}
 
-    this.usuario = this._usuarioService.getUsuario(dni, pass);
+  guardar() {
+    this.setUsuario(this.usuario);
 
-    if(!this.usuario){
+    this.objUsuario = this._usuarioService.getUsuario(this.usuario.dni, this.usuario.clave)
+
+    if(!this.objUsuario){
       console.log(" Credenciales no existe.");
 
     } else {
-      if( this.usuario.idrol == 0 ){
+      if( this.objUsuario.idrol == 0 ){
         this.router.navigate([ '/inicioPortalAdministrador' ]);
-      } else if( this.usuario.idrol == 1 ){
+      } else if( this.objUsuario.idrol == 1 ){
         this.router.navigate([ '/inicio' ]);
       }
       
       
     }
-
   }
 
+  public setForma(usuario: UsuarioModel) {
+    // console.log(this.forma);
+    console.log(usuario);
+    this.forma = new FormGroup({
+      dni: new FormControl(usuario.dni, Validators.required),
+      clave: new FormControl(usuario.clave, Validators.required)
+    });
+  }
+
+  public setUsuario(usuario: UsuarioModel) {
+    this.usuario.dni = this.forma.controls["dni"].value;
+    this.usuario.clave = this.forma.controls["clave"].value;
+
+    console.log(this.usuario);
+  }
 }

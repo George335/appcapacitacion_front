@@ -16,3 +16,23 @@ footer {
 .texto_blanco {
     color: white;
 }
+
+.banner-image {
+    background-image: url("https://cms.cloudinary.vpsvc.com//image/fetch/t_sitecore_images/f_auto,dpr_auto,w_700/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen-GB%2F%7BF39342EE-1160-49F2-AFE4-14A75648DD2E%7D");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-site {
+    background: #000000 url(https://cms.cloudinary.vpsvc.com//image/fetch/t_sitecore_images/f_auto,dpr_auto,w_700/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen-GB%2F%7BF39342EE-1160-49F2-AFE4-14A75648DD2E%7D) 100% 100% no-repeat;
+}
+
+#grad1 {
+    height: 100px;
+    /* background-color: #cccccc; */
+    background-image: url(https://cms.cloudinary.vpsvc.com//image/fetch/t_sitecore_images/f_auto,dpr_auto,w_700/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen-GB%2F%7BF39342EE-1160-49F2-AFE4-14A75648DD2E%7D);
+}

@@ -49,8 +49,8 @@ export class RegistroItemCapacitacionComponent implements OnInit {
     this.pregunta.pregunta2 = this.forma.controls["pregunta2"].value;
     this.pregunta.pregunta3 = this.forma.controls["pregunta3"].value;
 
-    // console.log(this.item);
-    // console.log(this.pregunta);
+    console.log(this.item);
+    console.log(this.pregunta);
 
     this.router.navigate( ['/registroRespuestaItem'] );
 
